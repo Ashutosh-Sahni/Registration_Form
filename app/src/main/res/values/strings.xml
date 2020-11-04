@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Registration Form</string>
+    <string name="registration_form">Registration Form</string>
+    <string name="full_name">Full Name</string>
+    <string name="e_mail_id">E-mail ID</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+    <string name="languages">Languages Known</string>
+    <string name="java">Java</string>
+    <string name="python">Python</string>
+    <string name="javascript">JavaScript</string>
+    <string name="c">C/C++</string>
+    <string name="address">Address</string>
+    <string name="terms">I agree to the <b><u>Terms and Conditions</u></b>.</string>
+    <string name="submit">Submit</string>
+    <string name="welcome">Welcome Here</string>
+</resources>

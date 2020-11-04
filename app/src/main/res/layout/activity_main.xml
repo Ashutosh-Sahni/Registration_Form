@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/myfont"
+            android:text="@string/registration_form"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <TextView
+            android:fontFamily="@font/myfont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/full_name"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/et_bg"
+            android:fontFamily="@font/myfont"
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/e_mail_id"
+            android:textColor="@color/black"
+            android:fontFamily="@font/myfont"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/et_bg"
+            android:imeOptions="actionNext"
+            android:fontFamily="@font/myfont"
+            android:inputType="textEmailAddress"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/phone_number"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/myfont"/>
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/et_bg"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:padding="8dp"
+            android:fontFamily="@font/myfont"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/date_of_birth"
+            android:textColor="@color/black"
+            android:fontFamily="@font/myfont"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_dob"
+            android:fontFamily="@font/myfont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/et_bg"
+            android:imeOptions="actionNext"
+            android:inputType="date"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/gender"
+            android:fontFamily="@font/myfont"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RadioButton
+                android:id="@+id/rb_male"
+                android:fontFamily="@font/myfont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/male"
+                android:onClick="checkGender"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/rb_female"
+                android:onClick="checkGender"
+                android:fontFamily="@font/myfont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/female"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:onClick="checkGender"
+                android:fontFamily="@font/myfont"
+                android:id="@+id/rb_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/other"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:fontFamily="@font/myfont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/languages"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <CheckBox
+                android:id="@+id/cb_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/c"
+                android:fontFamily="@font/myfont"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+            <CheckBox
+                android:id="@+id/cb_java"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/myfont"
+                android:layout_weight="1"
+                android:text="@string/java"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <CheckBox
+                android:id="@+id/cb_python"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/python"
+                android:fontFamily="@font/myfont"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/cb_javascript"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/javascript"
+                android:textColor="@color/black"
+                android:fontFamily="@font/myfont"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/address"
+            android:fontFamily="@font/myfont"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_address"
+            android:fontFamily="@font/myfont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/et_bg"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:maxLines="10"
+            android:minLines="2"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/cb_terms"
+            android:text="@string/terms"
+            android:textColor="@color/black"
+            android:fontFamily="@font/myfont"
+            android:paddingStart="16dp"
+            android:paddingEnd="8dp"
+            android:textSize="18sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"
+            android:textAllCaps="false"
+            android:id="@+id/btn_submit"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_bg"
+            android:textSize="18sp"
+            android:fontFamily="@font/myfont"
+            android:layout_marginTop="30dp"
+            />
+
+    </LinearLayout>
+
+
+</ScrollView>
